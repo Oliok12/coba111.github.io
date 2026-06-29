@@ -372,6 +372,30 @@
             border-top: 1px solid #e8efe8;
         }
 
+        /* ===== BANNER MIE ===== */
+        .mie-banner {
+            background: #f0f5f0;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            border-left: 4px solid #7C9A7C;
+        }
+
+        .mie-banner p {
+            font-size: 15px;
+            color: #2D2D2D;
+        }
+
+        .mie-banner strong {
+            color: #2D2D2D;
+        }
+
+        .mie-banner .note {
+            color: #888;
+            font-size: 13px;
+        }
+
         /* ===== SOSIAL MEDIA ===== */
         .social-links {
             display: flex;
@@ -569,6 +593,10 @@
             .foto-grid {
                 grid-template-columns: 1fr;
                 max-width: 500px;
+            }
+
+            .mie-banner p {
+                font-size: 13px;
             }
         }
 
@@ -815,28 +843,45 @@
 <!-- ===== JAVASCRIPT ===== -->
 <script>
     const menuData = [
-        { category: 'bakmi', name: 'Bakmi Ayam', desc: 'Mie gepeng/kecil/kwetiau + ayam', price: '17K' },
-        { category: 'bakmi', name: 'Bakmi Ayam Charsiu', desc: 'Mie + ayam charsiu / chilli oil', price: '18K' },
-        { category: 'bakmi', name: 'Bakmi Ayam Pangsit', desc: 'Mie + ayam + pangsit', price: '20K' },
-        { category: 'bakmi', name: 'Bakmi Ayam Pangsit Charsiu', desc: 'Mie + ayam + pangsit + charsiu', price: '21K' },
-        { category: 'bakmi', name: 'Bakmi Ayam Bakso', desc: 'Mie + ayam + bakso', price: '20K' },
-        { category: 'bakmi', name: 'Bakmi Ayam Bakso Charsiu', desc: 'Mie + ayam + bakso + charsiu', price: '21K' },
-        { category: 'bakmi', name: 'Bakmi Komplit', desc: 'Mie + ayam + pangsit + bakso', price: '23K' },
-        { category: 'bakmi', name: 'Bakmi Komplit Charsiu', desc: 'Mie + ayam + pangsit + bakso + charsiu', price: '24K' },
-        { category: 'mie', name: 'Mie Biasa', desc: 'Mie/kwetiau/bihun goreng/rebus + telur + tauge + sawi + kucai', price: '15K' },
-        { category: 'mie', name: 'Mie Spesial Waras', desc: 'Mie + telur + ayam charsiu + ampyang + bakso ikan + tauge + sawi + kucai', price: '26K' },
+        // ===== BAKMI (Opsi C) =====
+        { category: 'bakmi', name: 'Bakmi Ayam', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam', price: '17K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Charsiu', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam charsiu', price: '18K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Chilli Oil', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + chilli oil', price: '18K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Pangsit', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + pangsit', price: '20K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Pangsit Charsiu', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + pangsit + charsiu', price: '21K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Pangsit Chilli Oil', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + pangsit + chilli oil', price: '21K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Bakso', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + bakso', price: '20K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Bakso Charsiu', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + bakso + charsiu', price: '21K' },
+        { category: 'bakmi', name: 'Bakmi Ayam Bakso Chilli Oil', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + bakso + chilli oil', price: '21K' },
+        { category: 'bakmi', name: 'Bakmi Komplit', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + pangsit + bakso', price: '23K' },
+        { category: 'bakmi', name: 'Bakmi Komplit Charsiu', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + pangsit + bakso + charsiu', price: '24K' },
+        { category: 'bakmi', name: 'Bakmi Komplit Chilli Oil', desc: 'Pilih mie: Gepeng/Kecil/Kwetiau + ayam + pangsit + bakso + chilli oil', price: '24K' },
+
+        // ===== ANEKA MIE =====
+        { category: 'mie', name: 'Bakmie Biasa', desc: 'Bakmie goreng/rebus + telur + tauge + sawi + kucai', price: '15K' },
+        { category: 'mie', name: 'Kwetiau Biasa', desc: 'Kwetiau goreng/rebus + telur + tauge + sawi + kucai', price: '15K' },
+        { category: 'mie', name: 'Bihun Biasa', desc: 'Bihun goreng/rebus + telur + tauge + sawi + kucai', price: '15K' },
+        { category: 'mie', name: 'Bakmie Spesial Waras', desc: 'Bakmie + telur + ayam charsiu + ampyang + bakso ikan + tauge + sawi + kucai', price: '26K' },
+        { category: 'mie', name: 'Kwetiau Spesial Waras', desc: 'Kwetiau + telur + ayam charsiu + ampyang + bakso ikan + tauge + sawi + kucai', price: '26K' },
+        { category: 'mie', name: 'Bihun Spesial Waras', desc: 'Bihun + telur + ayam charsiu + ampyang + bakso ikan + tauge + sawi + kucai', price: '26K' },
+
+        // ===== MENU NASI =====
         { category: 'nasi', name: 'Nasi Telor', desc: 'Nasi putih + telur', price: '10K' },
         { category: 'nasi', name: 'Nasi Ayam Madu', desc: 'Nasi + ayam goreng tepung + bumbu madu', price: '17K' },
         { category: 'nasi', name: 'Nasi Ayam Cabai Garam', desc: 'Nasi + ayam goreng tepung + cabai garam', price: '17K' },
         { category: 'nasi', name: 'Nasi Ayam Chilli Padi', desc: 'Nasi + ayam goreng tepung + chilli padi', price: '17K' },
         { category: 'nasi', name: 'Nasi Ikan Cabai Garam', desc: 'Nasi + ikan goreng tepung + cabai garam', price: '12K' },
         { category: 'nasi', name: 'Nasi Ikan Chilli Padi', desc: 'Nasi + ikan goreng tepung + chilli padi', price: '12K' },
+
+        // ===== NASI GORENG =====
         { category: 'nasgor', name: 'Nasi Goreng Ayam', desc: 'Nasi goreng + ayam', price: '15K' },
         { category: 'nasgor', name: 'Nasi Goreng Waras', desc: 'Nasi goreng + ayam + bakso ikan + telur', price: '26K' },
         { category: 'nasgor', name: 'Nasi Goreng Gila', desc: 'Nasi goreng + tumisan ayam + ayam charsiu + bakso ikan + telur', price: '28K' },
         { category: 'nasgor', name: 'Nasi Goreng Teri Medan', desc: 'Nasi goreng + ayam + teri medan + telur', price: '18K' },
         { category: 'nasgor', name: 'Nasi Goreng Cumi Asin', desc: 'Nasi goreng + cumi asin + telur', price: '18K' },
-        { category: 'lauk', name: 'Ifu Mie', desc: 'Mie goreng khas', price: '26K' },
+
+        // ===== PAKET LAUK =====
+        { category: 'lauk', name: 'I Fu Mie', desc: 'I Fu Mie khas', price: '26K' },
         { category: 'lauk', name: 'Fuyunghai', desc: 'Telur dadar khas dengan sayuran', price: '35K' },
         { category: 'lauk', name: 'Sapo Tahu', desc: 'Tahu dengan saus spesial', price: '35K' },
         { category: 'lauk', name: 'Ayam Madu', desc: 'Ayam goreng dengan saus madu', price: '35K' },
@@ -844,6 +889,8 @@
         { category: 'lauk', name: 'Ayam Cilipadi', desc: 'Ayam goreng chilli padi', price: '35K' },
         { category: 'lauk', name: 'Ikan Cabai Garam', desc: 'Ikan goreng cabai garam', price: '20K' },
         { category: 'lauk', name: 'Ikan Chilli Padi', desc: 'Ikan goreng chilli padi', price: '20K' },
+
+        // ===== CAMILAN =====
         { category: 'camilan', name: 'Pangsit Goreng', desc: '5 pcs', price: '10K' },
         { category: 'camilan', name: 'Bakso Goreng', desc: '8 pcs', price: '10K' },
         { category: 'camilan', name: 'Kentang Goreng', desc: 'Porsi sedang', price: '10K' },
@@ -852,6 +899,8 @@
         { category: 'camilan', name: 'Bakwan Sayur', desc: '4 pcs', price: '10K' },
         { category: 'camilan', name: 'Bakwan Jagung', desc: '5 pcs', price: '10K' },
         { category: 'camilan', name: 'Pisang Goreng', desc: '4 pcs', price: '10K' },
+
+        // ===== ROTI & PISANG =====
         { category: 'roti', name: 'Roti Butter', desc: 'Roti bakar + butter', price: '14K' },
         { category: 'roti', name: 'Roti Coklat', desc: 'Roti bakar + coklat', price: '14K' },
         { category: 'roti', name: 'Roti Kacang Coklat', desc: 'Roti bakar + kacang + coklat', price: '16K' },
@@ -860,6 +909,8 @@
         { category: 'roti', name: 'Pisang Keju Susu', desc: 'Pisang bakar + keju + susu', price: '18K' },
         { category: 'roti', name: 'Roti Butter Kaya', desc: 'Roti bakar + butter kaya', price: '16K' },
         { category: 'roti', name: 'Pisang Butter Kaya', desc: 'Pisang bakar + butter kaya', price: '18K' },
+
+        // ===== MINUMAN =====
         { category: 'minuman', name: 'Kopi Saring (Panas)', desc: 'Kopi saring tradisional', price: '10K' },
         { category: 'minuman', name: 'Kopi Saring (Dingin)', desc: 'Kopi saring es', price: '12K' },
         { category: 'minuman', name: 'Kopi Teras (Panas)', desc: 'Kopi spesial Waras', price: '15K' },
@@ -877,6 +928,8 @@
         { category: 'minuman', name: 'Air Mineral', desc: 'Air mineral dingin', price: '5K' },
         { category: 'minuman', name: 'Es Badak', desc: 'Minuman khas segar', price: '15K' },
         { category: 'minuman', name: 'Coffee Bear', desc: 'Minuman kopi spesial', price: '14K' },
+
+        // ===== TAMBAHAN =====
         { category: 'tambahan', name: 'Porsi Jumbo', desc: 'Tambah porsi lebih besar', price: '5K' },
         { category: 'tambahan', name: 'Ayam Cincang', desc: 'Tambahan ayam cincang', price: '5K' },
         { category: 'tambahan', name: 'Ayam Char Siu', desc: 'Tambahan ayam char siu', price: '6K' },
@@ -888,6 +941,7 @@
         { category: 'tambahan', name: 'Nasi Putih', desc: 'Tambahan nasi putih', price: '5K' },
     ];
 
+    // Fungsi renderMenu dengan banner untuk kategori Bakmi
     function renderMenu(category = 'all') {
         const container = document.getElementById('menuContainer');
         let filtered = menuData;
@@ -901,7 +955,21 @@
             return;
         }
 
-        let html = '<div class="menu-grid">';
+        let html = '';
+
+        // Tampilkan banner hanya jika kategori Bakmi dipilih
+        if (category === 'bakmi') {
+            html += `
+                <div class="mie-banner">
+                    <p>
+                        🍜 <strong>Pilihan Mie:</strong> Gepeng &bull; Kecil &bull; Kwetiau 
+                        <span class="note">(harga sama untuk semua jenis mie)</span>
+                    </p>
+                </div>
+            `;
+        }
+
+        html += '<div class="menu-grid">';
         filtered.forEach(item => {
             const imgName = getImageName(item.name);
             html += `
