@@ -26,8 +26,8 @@ const menuData = [
     { category: 'nasi', name: 'Nasi Ayam Madu', desc: 'Nasi + ayam goreng tepung + bumbu madu', price: '17K' },
     { category: 'nasi', name: 'Nasi Ayam Cabai Garam', desc: 'Nasi + ayam goreng tepung + cabai garam', price: '17K' },
     { category: 'nasi', name: 'Nasi Ayam Chilli Padi', desc: 'Nasi + ayam goreng tepung + chilli padi', price: '17K' },
-    { category: 'nasi', name: 'Nasi Ikan Cabai Garam', desc: 'Nasi + ikan goreng tepung + cabai garam', price: '12K' },
-    { category: 'nasi', name: 'Nasi Ikan Chilli Padi', desc: 'Nasi + ikan goreng tepung + chilli padi', price: '12K' },
+    { category: 'nasi', name: 'Nasi Ikan Cabai Garam', desc: 'Nasi + ikan goreng tepung + cabai garam', price: '13K' },
+    { category: 'nasi', name: 'Nasi Ikan Chilli Padi', desc: 'Nasi + ikan goreng tepung + chilli padi', price: '13K' },
 
     // ===== NASI GORENG =====
     { category: 'nasgor', name: 'Nasi Goreng Ayam', desc: 'Nasi goreng + ayam', price: '15K' },
@@ -43,8 +43,8 @@ const menuData = [
     { category: 'lauk', name: 'Ayam Madu', desc: 'Ayam goreng dengan saus madu', price: '35K' },
     { category: 'lauk', name: 'Ayam Cabai Garam', desc: 'Ayam goreng cabai garam', price: '35K' },
     { category: 'lauk', name: 'Ayam Cilipadi', desc: 'Ayam goreng chilli padi', price: '35K' },
-    { category: 'lauk', name: 'Ikan Cabai Garam', desc: 'Ikan goreng cabai garam', price: '20K' },
-    { category: 'lauk', name: 'Ikan Chilli Padi', desc: 'Ikan goreng chilli padi', price: '20K' },
+    { category: 'lauk', name: 'Ikan Cabai Garam', desc: 'Ikan goreng cabai garam', price: '22K' },
+    { category: 'lauk', name: 'Ikan Chilli Padi', desc: 'Ikan goreng chilli padi', price: '22K' },
 
     // ===== CAMILAN =====
     { category: 'camilan', name: 'Pangsit Goreng', desc: '5 pcs', price: '10K' },
